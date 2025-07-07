@@ -1,0 +1,22 @@
+{
+  "title": "Cloud Cost Dashboard",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Daily AWS Costs",
+      "targets": [
+        {
+          "expr": "aws_cost{service!=\"\"}",
+          "legendFormat": "{{service}}",
+          "refId": "A"
+        }
+      ],
+      "xaxis": {
+        "mode": "time"
+      },
+      "yaxis": {
+        "format": "currencyUSD"
+      }
+    }
+  ]
+}
